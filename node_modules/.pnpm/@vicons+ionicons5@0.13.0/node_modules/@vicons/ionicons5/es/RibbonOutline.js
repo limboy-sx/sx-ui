@@ -1,0 +1,77 @@
+import { createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, defineComponent } from 'vue'
+const _hoisted_1 = {
+  xmlns: 'http://www.w3.org/2000/svg',
+  'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+  viewBox: '0 0 512 512'
+}
+export default defineComponent({
+  name: 'RibbonOutline',
+  render: function render(_ctx, _cache) {
+    return (
+      _openBlock(),
+      _createElementBlock(
+        'svg',
+        _hoisted_1,
+        _cache[0] ||
+          (_cache[0] = [
+            _createElementVNode(
+              'circle',
+              {
+                cx: '256',
+                cy: '160',
+                r: '128',
+                fill: 'none',
+                stroke: 'currentColor',
+                'stroke-linecap': 'round',
+                'stroke-linejoin': 'round',
+                'stroke-width': '32'
+              },
+              null,
+              -1 /* HOISTED */
+            ),
+            _createElementVNode(
+              'path',
+              {
+                d: 'M143.65 227.82L48 400l86.86-.42a16 16 0 0 1 13.82 7.8L192 480l88.33-194.32',
+                fill: 'none',
+                stroke: 'currentColor',
+                'stroke-linecap': 'round',
+                'stroke-linejoin': 'round',
+                'stroke-width': '32'
+              },
+              null,
+              -1 /* HOISTED */
+            ),
+            _createElementVNode(
+              'path',
+              {
+                d: 'M366.54 224L464 400l-86.86-.42a16 16 0 0 0-13.82 7.8L320 480l-64-140.8',
+                fill: 'none',
+                stroke: 'currentColor',
+                'stroke-linecap': 'round',
+                'stroke-linejoin': 'round',
+                'stroke-width': '32'
+              },
+              null,
+              -1 /* HOISTED */
+            ),
+            _createElementVNode(
+              'circle',
+              {
+                cx: '256',
+                cy: '160',
+                r: '64',
+                fill: 'none',
+                stroke: 'currentColor',
+                'stroke-linecap': 'round',
+                'stroke-linejoin': 'round',
+                'stroke-width': '32'
+              },
+              null,
+              -1 /* HOISTED */
+            )
+          ])
+      )
+    )
+  }
+})

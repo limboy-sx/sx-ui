@@ -1,0 +1,50 @@
+// $namespace: 's';???(往上找配置)
+// $element-separator: '__';
+// $modifier-separator: '--';
+// $state-prefix: 'is-';
+
+@use "config" as *; // 导入config(往上找配置)
+@forward "config";
+
+$namespace: "s";
+$element-separator: "__";
+$modifier-separator: "--";
+$state-prefix: "is-";
+// .z-button() {
+@mixin b($block) {
+  $B: $namespace + "-" + $block;
+  .#{$B} {
+    @content;
+  }
+}
+
+// .z-button.is-xxx
+@mixin when($state) {
+  @at-root #{&}.#{$state-prefix}#{$state} {
+    @content;
+  }
+}
+
+// at-primary => .at-button=primary
+@mixin m($modifier) {
+  @at-root {
+    #{$modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+
+// at-header => .z-button-header
+@mixin e($element) {
+  @at-root {
+    &__#{$element} {
+      @content;
+    }
+  }
+}
+
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background: $background-color;
+  border-color: $border-color;
+}

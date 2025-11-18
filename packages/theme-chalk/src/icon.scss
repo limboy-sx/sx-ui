@@ -1,0 +1,33 @@
+@use "mixins/mixins.scss" as *; // 导入mixins
+
+@keyframes transform {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@include b("icon") {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  svg.loading {
+    animation: transform 1s linear infinite;
+  }
+}
+
+// .s-icon {
+//   display: inline-flex;
+//   align-items: center;
+//   line-height: 1;
+// }
+// .s-icon svg {
+//   width: 1em;
+//   height: 1em;
+//   flex: none;
+//   fill: currentColor;
+//   vertical-align: -0.125em; /* 视觉对齐，可按需调整 */
+// }

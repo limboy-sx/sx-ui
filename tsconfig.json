@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    // 指定要使用的模块系统，这里用 ESNext（现代 ES 模块）
+    "module": "ESNext",
+
+    // 是否生成类型声明文件（.d.ts），这里关闭
+    "declaration": false,
+
+    // 禁止隐式 any 类型报错，这里关闭（更宽松）
+    "noImplicitAny": true,
+
+    // 编译后移除注释
+    "removeComments": true,
+
+    // 指定模块解析策略，这里使用 Node.js 方式
+    "moduleResolution": "node",
+
+    // 允许 CommonJS 和 ES 模块混用导入
+    "esModuleInterop": true,
+
+    // Vue3 的 JSX 支持方式，preserve 表示保留给 Vue 编译处理
+    "jsx": "preserve",
+
+    // 是否编译内置库文件（通常为 false）
+    "noLib": false,
+
+    // 编译目标 JavaScript 版本，这里是 ES6
+    "target": "es6",
+
+    // 生成对应的 .map 文件（用于调试）
+    "sourceMap": true,
+
+    // 指定要包含的库文件，比如最新的 ES 特性和 DOM API
+    "lib": ["ESNext", "DOM"],
+
+    // 允许合成默认导入（例如允许 import Vue from 'vue'）
+    "allowSyntheticDefaultImports": true,
+
+    // 启用实验性装饰器（如 @Component）
+    "experimentalDecorators": true,
+
+    // 强制文件名大小写一致（避免在不同系统大小写不一致问题）
+    "forceConsistentCasingInFileNames": true,
+
+    // 允许导入 JSON 文件
+    "resolveJsonModule": true,
+
+    // 启用严格模式（包括各种类型检查）
+    "strict": true,
+
+    // 跳过库文件检查（加快编译速度）
+    "skipLibCheck": true
+  },
+
+  "exclude": [
+    // 排除 node_modules 目录
+    "node_modules",
+    // 排除测试文件夹
+    "**/**/tests/**",
+    // 排除打包输出目录
+    "dist/**"
+  ]
+}

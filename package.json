@@ -1,0 +1,32 @@
+{
+  "name": "limboy-ui",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "doc:dev": "pnpm -C docs dev"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@vitejs/plugin-vue-jsx": "^1.0.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-vue": "^10.5.1",
+    "globals": "^16.4.0",
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "unplugin-vue-define-options": "^3.1.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.22"
+  },
+  "dependencies": {
+    "@limboy-ui/components": "workspace:*",
+    "@limboy-ui/theme-chalk": "workspace:*",
+    "@limboy-ui/utils": "workspace:*",
+    "@vicons/ionicons5": "^0.13.0",
+    "async-validator": "^4.2.5"
+  }
+}

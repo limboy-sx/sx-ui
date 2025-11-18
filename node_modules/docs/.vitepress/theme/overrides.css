@@ -1,0 +1,38 @@
+.s-icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.s-icon svg {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  fill: currentColor;
+  vertical-align: -0.125em; /* 视觉对齐，可按需调整 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
