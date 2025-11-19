@@ -154,6 +154,7 @@ pnpm create vite play --template vue-ts
    
    ![demo](https://github.com/limboy-sx/sx-ui/issues/2#issue-3642456662)
 
-   
+   <img src="https://github.com/limboy-sx/sx-ui/issues/2#issue-3642456662" width="350" />
+
     
       
