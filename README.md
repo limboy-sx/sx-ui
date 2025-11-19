@@ -148,9 +148,12 @@ pnpm create vite play --template vue-ts
       props 类型与 UploadContentProps 不完全匹配（多字段/少字段/函数签名不一致）,需要显式构造完整返回值
   
  
-## 使用实例
+## 使用示例
 
-      
+
+   
+   ![demo](https://github.com/limboy-sx/sx-ui/issues/2#issue-3642456662)
+
    
     
       
