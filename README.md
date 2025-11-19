@@ -93,10 +93,11 @@ pnpm create vite play --template vue-ts
 </details>
 
 ## 技术栈
-  Vue3：采用 Vue3 + script setup 最新的 Vue3 组合式 API
-  Vite：真的很快
-  TypeScript：高效清晰的类型检查
-  SCSS：和 Element Plus 保持一致，函数式命名规范，方便大型项目的管理
-  pnpm：更快速的，节省磁盘空间的包管理工具
+  *  Vue3：采用 Vue3 + script setup 最新的 Vue3 组合式 API  
+  *  Vite：真的很快  
+  *  TypeScript：高效清晰的类型检查  
+  *  SCSS：和 Element Plus 保持一致，函数式命名规范，方便大型项目的管理  
+  *  pnpm：更快速的，节省磁盘空间的包管理工具  
+  *  VitePress：极速的 Vite 驱动静态文档生成器，挺方便的
 
-
+## vue3组件库开发常遇的问题
