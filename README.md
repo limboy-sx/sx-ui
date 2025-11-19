@@ -151,10 +151,25 @@ pnpm create vite play --template vue-ts
 ## 使用示例
 
 
-   
-   ![demo]([https://github.com/limboy-sx/sx-ui/issues/2#issue-3642456662](https://private-user-images.githubusercontent.com/54209506/516256339-133000fd-d262-4525-a0b9-97ff7bc9a805.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM1NTQ5NTksIm5iZiI6MTc2MzU1NDY1OSwicGF0aCI6Ii81NDIwOTUwNi81MTYyNTYzMzktMTMzMDAwZmQtZDI2Mi00NTI1LWEwYjktOTdmZjdiYzlhODA1LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE5VDEyMTczOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAwOTA5YzZhM2E0ZGI4YTE0NmFlYmI1OWU4NzA3MTU3MTE2ZGJjN2FjMzQ1NmMwYjUwZDdmZjg0NjIzMWJmMGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.GsVZSsoh6FqBJIFgKlloW4aI9t3vDq1rLBhVWILyAwI))
+input组件 
+   <img src="https://private-user-images.githubusercontent.com/54209506/516256339-133000fd-d262-4525-a0b9-97ff7bc9a805.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM1NTUzNDksIm5iZiI6MTc2MzU1NTA0OSwicGF0aCI6Ii81NDIwOTUwNi81MTYyNTYzMzktMTMzMDAwZmQtZDI2Mi00NTI1LWEwYjktOTdmZjdiYzlhODA1LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE5VDEyMjQwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTliNTQ5YzY0YmNhNmFlYjBmNWVjNmVlNTgyYmVmZTk4ODdjMGQyN2Y0NzAyYzkzMTZjZGI1ZDEwNzdkYjdjNzAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-cN3aWO4Cxt_OH17_AxeK4WXW1iKg2FNjMUZ_by8Cb8" width="350" />
 
-   <img src="https://github.com/limboy-sx/sx-ui/issues/2#issue-3642456662" width="350" />
-
+      
+      
+  ```
+  <s-input
+    :show-password="true"
+    :clearable="true"
+    :placeholder="'666'"
+    v-model="userName"
+    @blur="handleBlur"
+  >
+    <template #prepend>头部</template>
+    <template #prefixIcon>
+      <s-icon :size="20"> <AddCircle></AddCircle> </s-icon>
+    </template>
+    <template #append> 尾部</template>
+  </s-input>
+  ```
     
       
