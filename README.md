@@ -36,6 +36,7 @@ pnpm init
 pnpm install vue typescript -D
 
 ```
+
 ```
 
 # 工作区配置
@@ -92,6 +93,15 @@ pnpm create vite play --template vue-ts
 ```
 </details>
 
+<details>
+  <summary>重要开发依赖</summary>
+- "vue": "^3.x"  <br/>
+- async-validator（表单校验核心库）  <br/>
+- @xicons（图标库）  <br/>
+- lodash-es（Upload 和工具函数用于控制并发）  <br/>
+- dayjs（某些组件格式化时间，如日历（正在开发））  <br/>
+</details>
+
 ## 技术栈
   *  Vue3：采用 Vue3 + script setup 最新的 Vue3 组合式 API  
   *  Vite：真的很快  
@@ -100,4 +110,44 @@ pnpm create vite play --template vue-ts
   *  pnpm：更快速的，节省磁盘空间的包管理工具  
   *  VitePress：极速的 Vite 驱动静态文档生成器，挺方便的
 
-## vue3组件库开发常遇的问题
+## vue3组件库开发常遇兼容性相关的问题/坑
+  1. vite和typescript兼容性问题，ExtractPropTypes + typeof 导致类型丢失
+
+      ```
+      
+      // 避免使用typeof，可以使用interface替代
+      export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>;
+      
+      ```
+
+  2. vite和typescript的路径别名需要各自配置
+
+      ```
+      //JSON
+      "compilerOptions": {
+        "paths": {"@/*": ["src/*"]}
+      
+      //vite.config.ts
+      resolve: {
+      alias: {"@": path.resolve(__dirname, "src")}}
+      
+      ```
+      
+  3. monorepo + tsconfig path 导致 whithInstall 返回类型缺失
+
+      ```
+      //TS 不能正确推断 Form 的类型（因为类型从 dist 引入，被擦掉）
+      export type FormInstance = InstanceType<typeof Form>;
+      
+      ```
+        
+  4. computed<某类型> 返回值必须严格匹配，否则报错  
+      props 类型与 UploadContentProps 不完全匹配（多字段/少字段/函数签名不一致）,需要显式构造完整返回值
+  
+ 
+      
+
+      
+   
+    
+      
