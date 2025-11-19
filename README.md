@@ -8,14 +8,15 @@
 
 
 ## 项目文件架构  
-packages/ 组建库主文件   
-docs/ VitePress 文档，组件文档  
-play/ Playground 预览，用于本地测试  
-package.json  
-tsconfig.json  
-README.md  
-.gitignore    
-
+sx-ui <br/>
+├─ packages <br/>
+│ ├─ components # 组件库源码 <br/>
+│ ├─ hooks # 通用 hooks <br/>
+│ ├─ utils # 工具函数 <br/>
+├─ play # 组件预览环境（Playground） <br/>
+├─ docs # 文档系统（VitePress） <br/>
+└─ tsconfig.json # TS 配置 <br/>
+ 
 ## 使用
 <details>
   <summary>推荐环境</summary>
@@ -146,12 +147,42 @@ pnpm create vite play --template vue-ts
         
   4. computed<某类型> 返回值必须严格匹配，否则报错  
       props 类型与 UploadContentProps 不完全匹配（多字段/少字段/函数签名不一致）,需要显式构造完整返回值
-  
+
+
+## 安装方式
+
+```
+
+## 安装（暂未发布到 npm，可本地引用）
+
+```sh
+# 安装 sx-ui（未来）
+npm install sx-ui
+
+# 目前本地使用（示例）
+pnpm add ./packages/components
+
+```
+## 快速开始
+```
+
+//App.vue
+<script setup>
+import { SButton, SInput } from "sx-ui";
+</script>
+
+<template>
+  <SButton type="primary">Primary</SButton>
+  <SInput v-model="value" placeholder="请输入内容"></SInput>
+</template>
+
+```
+
  
 ## 使用示例
 
 
-input组件 
+input组件 <br/>
    <img src="https://private-user-images.githubusercontent.com/54209506/516256339-133000fd-d262-4525-a0b9-97ff7bc9a805.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM1NTUzNDksIm5iZiI6MTc2MzU1NTA0OSwicGF0aCI6Ii81NDIwOTUwNi81MTYyNTYzMzktMTMzMDAwZmQtZDI2Mi00NTI1LWEwYjktOTdmZjdiYzlhODA1LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTE5VDEyMjQwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTliNTQ5YzY0YmNhNmFlYjBmNWVjNmVlNTgyYmVmZTk4ODdjMGQyN2Y0NzAyYzkzMTZjZGI1ZDEwNzdkYjdjNzAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-cN3aWO4Cxt_OH17_AxeK4WXW1iKg2FNjMUZ_by8Cb8" width="350" />
 
       
@@ -172,4 +203,14 @@ input组件
   </s-input>
   ```
     
-      
+
+  ## About
+
+这是我参考前公司内部组件库与 ElementUI 设计思想实现的 Vue3 UI 组件库。
+主要目的：
+- 作为前端工程化 & 组件化的总结
+- 稳固自己的前端体系知识
+- 未来根据需求持续维护与扩展
+
+欢迎 Issue / PR，如果你也想学习如何从 0 到 1 搭建组件库，这个项目一定能帮到你。
+
