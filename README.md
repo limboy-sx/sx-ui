@@ -3,6 +3,9 @@
 这个组建库和我在前公司开发的组件库架构大致相同，也是参考ElementUI的实现方式，主要是给自己一个技术备份，如看客有学习的意愿，可以参考一下
 ，样式之后会完善，重要的是架构和逻辑，对组件的结构和逻辑的理解有很大的帮助。
 
+### 目前可用组件
+ `form` `button` `checkBox` `icon` `input` `tree` `upload` `dayList(开发中)`
+
 
 ## 项目文件架构  
 packages/ 组建库主文件   
@@ -145,7 +148,7 @@ pnpm create vite play --template vue-ts
       props 类型与 UploadContentProps 不完全匹配（多字段/少字段/函数签名不一致）,需要显式构造完整返回值
   
  
-      
+## 使用实例
 
       
    
